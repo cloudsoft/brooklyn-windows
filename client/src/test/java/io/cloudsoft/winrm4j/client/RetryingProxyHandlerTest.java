@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 
-import javax.xml.ws.WebServiceException;
+import jakarta.xml.ws.WebServiceException;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

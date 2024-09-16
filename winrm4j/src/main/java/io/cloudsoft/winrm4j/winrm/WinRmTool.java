@@ -446,7 +446,7 @@ public class WinRmTool {
 
     private String compilePs(String psScript) {
         byte[] cmd = psScript.getBytes(Charset.forName("UTF-16LE"));
-        String arg = javax.xml.bind.DatatypeConverter.printBase64Binary(cmd);
+        String arg = jakarta.xml.bind.DatatypeConverter.printBase64Binary(cmd);
         return "powershell -encodedcommand " + arg;
     }
 

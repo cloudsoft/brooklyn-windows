@@ -22,7 +22,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.cloudsoft.windows</groupId>
   <artifactId>winrm4j-parent</artifactId>
-  <version>0.12.3</version> <!-- WINRM4J_VERSION -->
+  <version>0.12.4-SNAPSHOT</version> <!-- WINRM4J_VERSION -->
   <packaging>pom</packaging>
   <name>WinRM Parent</name>
   <description>
@@ -61,19 +61,21 @@
     <includedTestGroups />
     <excludedTestGroups>Integration,Acceptance,Live,WIP</excludedTestGroups>
     <surefire.failIfNoSpecifiedTests>false</surefire.failIfNoSpecifiedTests>
-    <surefire.version>2.19.1</surefire.version>
+    <surefire.version>2.22.0</surefire.version>
     <testng.version>6.9.10</testng.version>
-    <guava.version>18.0</guava.version>
-    <mockwebserver.version>3.5.0</mockwebserver.version>
+    <guava.version>27.1-jre</guava.version>
+    <mockwebserver.version>4.10.0</mockwebserver.version>
 
     <!-- Production -->
-    <cxf.version>3.3.9</cxf.version>
+    <cxf.version>4.0.0</cxf.version>
+    <jakarta.version>4.0.2</jakarta.version>
+    <com.sun.xml.messaging.saaj.version>3.0.0</com.sun.xml.messaging.saaj.version>
     <cxf.java2ws.plugin.version>${cxf.version}</cxf.java2ws.plugin.version>
-    <httpcomponents.httpcore.version>4.4.12</httpcomponents.httpcore.version>
-    <httpcomponents.httpasyncclient.version>4.1.4</httpcomponents.httpasyncclient.version>
-    <httpcomponents.httpclient.version>4.5.13</httpcomponents.httpclient.version>
-    <commons-io.version>2.4</commons-io.version>
-    <xmlunit.version>2.3.0</xmlunit.version>
+    <httpcomponents.httpcore.version>4.4.16</httpcomponents.httpcore.version>
+    <httpcomponents.httpasyncclient.version>4.1.5</httpcomponents.httpasyncclient.version>
+    <httpcomponents.httpclient.version>4.5.14</httpcomponents.httpclient.version>
+    <commons-io.version>2.11.0</commons-io.version>
+    <xmlunit.version>2.8.1</xmlunit.version>
   </properties>
 
   <modules>
@@ -169,7 +171,7 @@
       <plugins>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.0</version>
+          <version>3.11.0</version>
           <configuration>
             <source>${java.version}</source>
             <target>${java.version}</target>
@@ -210,7 +212,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>2.18.1</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -219,23 +221,23 @@
         <plugin>
           <groupId>org.apache.felix</groupId>
           <artifactId>maven-bundle-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>5.1.8</version>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.3.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-source-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>3.2.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.5.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-eclipse-plugin</artifactId>
@@ -247,7 +249,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.10.4</version>
+          <version>3.5.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-gpg-plugin</artifactId>

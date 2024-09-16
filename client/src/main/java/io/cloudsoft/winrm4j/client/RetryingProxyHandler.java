@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import javax.xml.ws.WebServiceException;
-import javax.xml.ws.soap.SOAPFaultException;
+import jakarta.xml.ws.WebServiceException;
+import jakarta.xml.ws.soap.SOAPFaultException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
