@@ -1,6 +1,6 @@
 package io.cloudsoft.winrm4j.client.retry;
 
-import javax.xml.ws.WebServiceException;
+import jakarta.xml.ws.WebServiceException;
 
 /**
  * Policy to decide if a retry should be done.

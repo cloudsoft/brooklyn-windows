@@ -23,10 +23,36 @@
   <parent>
     <groupId>io.cloudsoft.windows</groupId>
     <artifactId>winrm4j-parent</artifactId>
-    <version>0.12.3</version> <!-- WINRM4J_VERSION -->
+    <version>0.12.4-SNAPSHOT</version> <!-- WINRM4J_VERSION -->
   </parent>
   <artifactId>winrm4j-client</artifactId>
   <name>WinRM Client</name>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- required as cxf v4 still pulls old libraries (see release notes) -->
+      <dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+        <version>4.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.xml.ws</groupId>
+        <artifactId>jakarta.xml.ws-api</artifactId>
+        <version>4.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+        <version>4.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.xml.messaging.saaj</groupId>
+        <artifactId>saaj-impl</artifactId>
+        <version>3.0.0</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -142,6 +168,18 @@
       <artifactId>xmlunit-matchers</artifactId>
       <version>${xmlunit.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.glassfish.jaxb</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.messaging.saaj</groupId>
+      <artifactId>saaj-impl</artifactId>
+      <scope>test</scope>
+      <optional>true</optional>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -214,7 +252,7 @@
                  * Summary of conclusions: https://lists.apache.org/thread.html/f24c5833eb0ffda00021a57a606e143a4f5a2b7971df4e11406df1a6%40%3Cdev.brooklyn.apache.org%3E
                -->
               <Import-Package>
-                javax.xml.bind*;version=!,
+                jakarta.xml.bind*;version=!,
                 *
               </Import-Package>
           </instructions>

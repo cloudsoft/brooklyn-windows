@@ -1,6 +1,6 @@
 package io.cloudsoft.winrm4j.service;
 
-import javax.xml.ws.Endpoint;
+import jakarta.xml.ws.Endpoint;
 
 public class ExampleServer {
 

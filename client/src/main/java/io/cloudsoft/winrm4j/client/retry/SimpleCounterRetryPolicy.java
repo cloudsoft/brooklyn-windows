@@ -3,7 +3,7 @@ package io.cloudsoft.winrm4j.client.retry;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
-import javax.xml.ws.WebServiceException;
+import jakarta.xml.ws.WebServiceException;
 
 /**
  * Retry policy that uses max number of retries.

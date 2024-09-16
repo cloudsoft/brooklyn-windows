@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import javax.xml.ws.spi.Provider;
-import javax.xml.ws.spi.ServiceDelegate;
+import jakarta.xml.ws.spi.Provider;
+import jakarta.xml.ws.spi.ServiceDelegate;
 import org.apache.cxf.Bus;
 import org.apache.cxf.BusFactory;
 import org.apache.cxf.interceptor.Interceptor;
@@ -86,7 +86,7 @@ public class WinRmFactory {
         WinRmService service = doCreateService_1_CreateMinimalServiceInstance();
 
         try {
-            Field delegateField = javax.xml.ws.Service.class.getDeclaredField("delegate"); //ALLOW CXF SPECIFIC SERVICE DELEGATE ONLY!
+            Field delegateField = jakarta.xml.ws.Service.class.getDeclaredField("delegate"); //ALLOW CXF SPECIFIC SERVICE DELEGATE ONLY!
             delegateField.setAccessible(true);
             ServiceDelegate previousDelegate = (ServiceDelegate) delegateField.get(service);
             if (!previousDelegate.getClass().getName().contains("cxf")) {

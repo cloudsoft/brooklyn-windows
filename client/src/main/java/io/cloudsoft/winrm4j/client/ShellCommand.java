@@ -5,7 +5,7 @@ import java.io.Writer;
 import java.util.List;
 import java.util.function.Predicate;
 
-import javax.xml.ws.soap.SOAPFaultException;
+import jakarta.xml.ws.soap.SOAPFaultException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -26,7 +26,7 @@
   <parent>
     <groupId>io.cloudsoft.windows</groupId>
     <artifactId>winrm4j-parent</artifactId>
-    <version>0.12.3</version> <!-- WINRM4J_VERSION -->
+    <version>0.12.4-SNAPSHOT</version> <!-- WINRM4J_VERSION -->
   </parent>
 
   <name>Java WinRM library</name>
@@ -72,7 +72,7 @@
                  * Summary of conclusions: https://lists.apache.org/thread.html/f24c5833eb0ffda00021a57a606e143a4f5a2b7971df4e11406df1a6%40%3Cdev.brooklyn.apache.org%3E
                -->
               <Import-Package>
-                javax.xml.bind*;version=!,
+                jakarta.xml.bind*;version=!,
                 *
               </Import-Package>
           </instructions>
